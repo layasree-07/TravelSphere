@@ -1,0 +1,6 @@
+{
+  "name": "TravelSphere",
+  "description": "A comprehensive travel booking and destination discovery portal with tour itineraries, reservation management, and MySQL database schema integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
