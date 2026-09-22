@@ -1,6 +1,8 @@
+import authRoutes from './server/travelsphere_mysql/server/mysql/authRoutes';
+import dotenv from 'dotenv';
+dotenv.config();
 import express from "express";
 import path from "path";
-import dotenv from "dotenv";
 import { GoogleGenAI } from "@google/genai";
 import { createServer as createViteServer } from "vite";
 import { verifyPlaceKnowledge, isEducationalOrNonTouristPlace } from "./server/placeKnowledge";
@@ -8,7 +10,6 @@ import { getDatabaseDestinations, updatePlaceInDatabase } from "./server/destina
 import { fetchWikipediaPlaceDetails } from "./server/wikipediaService";
 
 dotenv.config();
-
 const app = express();
 const PORT = 3000;
 
@@ -254,3 +255,4 @@ async function startServer() {
 }
 
 startServer();
+app.use("/api/auth", authRoutes);
