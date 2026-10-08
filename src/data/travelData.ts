@@ -1323,54 +1323,7 @@ export function generatePackageForDestination(dest: Destination): TourPackage {
   };
 }
 
-export const INITIAL_BOOKINGS: Booking[] = [
-  {
-    id: 'TS-2026-8942',
-    packageId: 'PKG-SWISS-02',
-    packageTitle: 'Majestic Swiss Alps & Glacier Express Grand Tour',
-    destinationName: 'Swiss Alps & Lucerne',
-    country: 'Switzerland',
-    imageUrl: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80',
-    travelDate: '2026-11-12',
-    travelersCount: 2,
-    leadTraveler: {
-      fullName: 'Aarav Sharma',
-      email: 'aarav.sharma@travelsphere.io',
-      phone: '+91 98765 43210',
-      nationality: 'India',
-    },
-    totalAmount: 3780,
-    status: 'Confirmed',
-    paymentMethod: 'Credit Card',
-    paymentStatus: 'Paid',
-    transactionId: 'TXN-SWISS-99214',
-    bookingDate: '2026-09-15',
-    specialRequests: 'Window seats on the Glacier Express and vegetarian meals requested.',
-  },
-  {
-    id: 'TS-2026-7815',
-    packageId: 'PKG-BALI-01',
-    packageTitle: 'Bali Island Wonders & Nusa Penida Escape',
-    destinationName: 'Bali',
-    country: 'Indonesia',
-    imageUrl: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80',
-    travelDate: '2026-10-15',
-    travelersCount: 1,
-    leadTraveler: {
-      fullName: 'Priya Reddy',
-      email: 'priya.reddy@bvrithyderabad.edu.in',
-      phone: '+91 91234 56789',
-      nationality: 'India',
-    },
-    totalAmount: 899,
-    status: 'Confirmed',
-    paymentMethod: 'UPI / NetBanking',
-    paymentStatus: 'Paid',
-    transactionId: 'UPI-BALI-44312',
-    bookingDate: '2026-09-16',
-    specialRequests: 'King bed room preference in Seminyak villa.',
-  }
-];
+export const INITIAL_BOOKINGS: Booking[] = [];
 
 // Schema definitions for the MySQL 'travelsphere' database
 export const TRAVELSPHERE_DB_SCHEMAS: DbTableSchema[] = [

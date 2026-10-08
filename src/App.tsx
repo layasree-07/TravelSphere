@@ -57,16 +57,19 @@ export default function App() {
 
   // User Profile & Authentication State
   const [currentUser, setCurrentUser] = useState<UserProfile | null>(() => {
-    const saved = localStorage.getItem('travelsphere_current_user');
-    if (saved) {
-      try {
-        return JSON.parse(saved);
-      } catch (e) {
-        return DEFAULT_USERS[0];
-      }
+  const saved = localStorage.getItem('travelsphere_current_user');
+
+  if (saved) {
+    try {
+      return JSON.parse(saved);
+    } catch (e) {
+      localStorage.removeItem('travelsphere_current_user');
+      return null;
     }
-    return DEFAULT_USERS[0]; // Priya Reddy default active demo traveler
-  });
+  }
+
+  return null;
+});
 
   // Visited Places History with Persistence
   const [visitedPlaces, setVisitedPlaces] = useState<VisitedPlaceRecord[]>(() => {

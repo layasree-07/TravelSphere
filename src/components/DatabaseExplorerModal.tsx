@@ -59,18 +59,14 @@ export const DatabaseExplorerModal: React.FC<DatabaseExplorerModalProps> = ({
           rating: p.rating,
         }));
       case 'users':
-        return [
-          { id: 1, full_name: 'Aarav Sharma', email: 'aarav.sharma@travelsphere.io', phone: '+91 98765 43210', nationality: 'India', tier: 'Gold' },
-          { id: 2, full_name: 'Priya Reddy', email: 'priya.reddy@bvrithyderabad.edu.in', phone: '+91 91234 56789', nationality: 'India', tier: 'Platinum' },
-          ...bookings.map((b, idx) => ({
-            id: idx + 3,
-            full_name: b.leadTraveler.fullName,
-            email: b.leadTraveler.email,
-            phone: b.leadTraveler.phone,
-            nationality: b.leadTraveler.nationality,
-            tier: 'Silver',
-          })).filter((v, i, a) => a.findIndex(t => t.email === v.email) === i),
-        ];
+         return bookings.map((b, idx) => ({
+         id: idx + 1,
+         full_name: b.leadTraveler.fullName,
+         email: b.leadTraveler.email,
+         phone: b.leadTraveler.phone,
+         nationality: b.leadTraveler.nationality,
+         tier: 'Silver', })).filter((v, i, a) => a.findIndex(t => t.email === v.email) === i
+          );
       case 'bookings':
         return bookings.map((b) => ({
           id: b.id,

@@ -19,12 +19,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 }) => {
   const [guests, setGuests] = useState<number>(initialGuests || 2);
   const [travelDate, setTravelDate] = useState<string>(initialDate || tourPackage.availableDates[0] || '2026-11-15');
-  const [fullName, setFullName] = useState<string>('Priya Reddy');
-  const [email, setEmail] = useState<string>('priya.reddy@bvrithyderabad.edu.in');
-  const [phone, setPhone] = useState<string>('+91 98480 22338');
-  const [nationality, setNationality] = useState<string>('India');
+  const [fullName, setFullName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [phone, setPhone] = useState<string>('');
+  const [nationality, setNationality] = useState<string>('');
   const [paymentMethod, setPaymentMethod] = useState<'Credit Card' | 'PayPal' | 'UPI / NetBanking'>('Credit Card');
-  const [specialRequests, setSpecialRequests] = useState<string>('Vegetarian meals preference & high floor room.');
+  const [specialRequests, setSpecialRequests] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
 
